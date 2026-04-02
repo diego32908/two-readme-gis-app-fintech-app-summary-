@@ -1,0 +1,39 @@
+column_name,data_type,description,present_in,notes
+transaction_id,string,Unique synthetic transaction identifier (TX######).,All files,
+transaction_date,date (YYYY-MM-DD),Date the transaction occurred.,Raw + labeled,
+posted_date,date (YYYY-MM-DD),Date the transaction posted/settled.,Raw + labeled,Usually same day or within 1–2 days.
+month_key,string (YYYY-MM),Helper field for monthly aggregation.,Labeled only,
+account_name,string,Synthetic account name.,Raw + labeled,"Checking, savings, credit card, or brokerage."
+account_type,enum,"One of checking, savings, credit_card, brokerage.",Raw + labeled,
+merchant_name,string,Normalized merchant name.,Raw + labeled,Best field for grouping transactions.
+merchant_normalized,string,Normalized merchant key used in the labeled file.,Labeled only,Usually same as merchant_name.
+description,string,Noisy bank-export-style transaction text.,Raw + labeled,Use this for keyword mapping tests.
+amount,number,"Signed USD amount. Positive = inflow, negative = outflow.",Raw + labeled,This is the main numeric field.
+currency,string,Transaction currency.,Raw + labeled,Always USD in this synthetic set.
+channel,enum,"Payment channel such as Card, ACH, Autopay, Transfer, Debit, Direct Deposit, Brokerage.",Raw + labeled,
+city,string,Merchant city.,Raw + labeled,Optional helper for future location-based features.
+state,string,Merchant state.,Raw + labeled,Always CA or NY/WA/other U.S. state when relevant.
+transaction_kind,enum,"income, expense, transfer, refund, investment_buy, investment_income.",Labeled only,Useful for filtering cash flow.
+category_primary,string,Top-level category.,Labeled only,"Examples: Food, Utilities, Subscriptions, Income."
+category_secondary,string,More specific category.,Labeled only,"Examples: Groceries, Phone, Streaming Video."
+essentiality_label,enum,"green = essential/committed, red = discretionary/flexible.",Labeled only,Supports the spring green/red feature.
+recurring_flag,boolean,Whether the transaction is part of a repeating series.,Labeled only,
+subscription_flag,boolean,Whether the repeating series behaves like a subscription/recurring service.,Labeled only,Use this for subscription tracking.
+recurring_group_id,string,Stable group ID for repeated merchants/services.,Labeled only,Key field for recurring and price-change detection.
+billing_frequency,enum,"monthly, biweekly, or blank for non-recurring transactions.",Labeled only,
+recurrence_sequence_num,integer,Sequence number within a recurring group.,Labeled only,Starts at 1.
+days_since_prior_recurring,integer,Days since the previous transaction in the same recurring group.,Labeled only,
+previous_recurring_amount,number,Prior signed amount in the same recurring group.,Labeled only,Blank on first occurrence.
+price_change_flag,boolean,True when the recurring amount changed vs. the prior occurrence.,Labeled only,
+price_delta,number,Difference between current and prior signed recurring amount.,Labeled only,Negative means the charge became larger in absolute terms because outflows are negative.
+price_change_pct,number,Percent change in absolute charge amount vs. prior recurring charge.,Labeled only,
+merchant_stock_ticker,string,"Public-market ticker linked to the merchant, when useful.",Labeled + price events,Supports the opportunity-cost or “invest instead” feature.
+default_benchmark_ticker,string,Fallback benchmark ticker for opportunity-cost comparisons.,Labeled + merchant map,Usually VOO.
+investment_ticker,string,Ticker actually purchased in a brokerage transaction.,Labeled only,Only populated for investment_buy rows.
+investment_shares,number,Synthetic fractional shares purchased.,Labeled only,Only populated for investment_buy rows.
+exclude_from_budget_flag,boolean,True for transfers and investment buys that should usually be excluded from spending totals.,Labeled only,
+income_expense_flag,enum,inflow or outflow based on amount sign.,Labeled only,
+notes,string,Helper note for edge cases.,Labeled only,
+amount_abs,number,Absolute value of amount.,Labeled only,Useful for charts and price-comparison logic.
+budget_spend_flag,boolean,True for negative expense rows that should count as spending.,Labeled only,"Excludes transfers, refunds, and investment buys."
+is_subscription_price_change_increase,boolean,True on labeled rows that represent a consumer subscription price increase event.,Labeled only,Pairs directly with subscription_price_events.csv.

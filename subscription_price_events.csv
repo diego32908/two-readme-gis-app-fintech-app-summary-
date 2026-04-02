@@ -1,0 +1,9 @@
+event_date,recurring_group_id,merchant_name,category_primary,category_secondary,billing_frequency,essentiality_label,merchant_stock_ticker,old_charge,new_charge,increase_amount,price_change_pct,increase_direction
+2025-07-04,SUB_NETFLIX,NETFLIX,Subscriptions,Streaming Video,monthly,red,NFLX,15.49,17.99,2.5,16.14,increase
+2025-05-07,SUB_SPOTIFY,SPOTIFY,Subscriptions,Music Streaming,monthly,red,SPOT,10.99,11.99,1.0,9.1,increase
+2026-01-07,SUB_SPOTIFY,SPOTIFY,Subscriptions,Music Streaming,monthly,red,SPOT,11.99,12.99,1.0,8.34,increase
+2025-10-09,SUB_DISNEY,DISNEY+,Subscriptions,Streaming Video,monthly,red,DIS,13.99,15.99,2.0,14.3,increase
+2025-09-14,SUB_ADOBE,ADOBE,Software,Creative Tools,monthly,red,ADBE,19.99,34.99,15.0,75.04,increase
+2025-09-22,SUB_AMAZON_PRIME,AMAZON PRIME,Subscriptions,Retail Membership,monthly,red,AMZN,14.99,16.99,2.0,13.34,increase
+2025-11-25,SUB_GYM,PLANET FITNESS,Health & Fitness,Gym,monthly,red,,29.99,34.99,5.0,16.67,increase
+2025-12-27,SUB_ICLOUD,APPLE SERVICES,Subscriptions,Cloud Storage,monthly,red,AAPL,2.99,3.99,1.0,33.44,increase

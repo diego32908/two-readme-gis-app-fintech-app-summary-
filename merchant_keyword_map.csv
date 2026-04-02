@@ -1,0 +1,34 @@
+keyword,merchant_normalized,category_primary,category_secondary,essentiality_label,recurring_default,subscription_default,billing_frequency_default,merchant_stock_ticker,default_benchmark_ticker,account_type_hint,notes
+adobe,ADOBE,Software,Creative Tools,red,True,True,monthly,ADBE,VOO,checking/credit_card,Recurring monthly merchant; group SUB_ADOBE
+amazon,AMAZON,Shopping,Online Shopping,red,False,False,,AMZN,VOO,credit_card,
+amazon,AMAZON PRIME,Subscriptions,Retail Membership,red,True,True,monthly,AMZN,VOO,checking/credit_card,Recurring monthly merchant; group SUB_AMAZON_PRIME
+amc,AMC THEATRES,Entertainment,Movies,red,False,False,,AMC,VOO,credit_card,Entertainment
+apple,APPLE SERVICES,Subscriptions,Cloud Storage,red,True,True,monthly,AAPL,VOO,checking/credit_card,Recurring monthly merchant; group SUB_ICLOUD
+campus,CAMPUS VIEW APTS,Housing,Rent,green,True,False,monthly,,,checking/credit_card,Recurring monthly merchant; group BILL_RENT
+chevron,CHEVRON,Transportation,Gas,green,False,False,,CVX,VOO,debit,Fuel
+chipotle,CHIPOTLE,Food,Dining Out,red,False,False,,CMG,VOO,credit_card,Dining
+costco,COSTCO,Food,Groceries,green,False,False,,COST,VOO,credit_card,Bulk groceries
+cvs,CVS PHARMACY,Healthcare,Pharmacy,green,False,False,,CVS,VOO,credit_card,Medical
+disney+,DISNEY+,Subscriptions,Streaming Video,red,True,True,monthly,DIS,VOO,checking/credit_card,Recurring monthly merchant; group SUB_DISNEY
+doordash,DOORDASH,Food,Food Delivery,red,False,False,,DASH,VOO,credit_card,Delivery
+geico,GEICO,Insurance,Auto Insurance,green,True,True,monthly,,VOO,checking/credit_card,Recurring monthly merchant; group BILL_CAR_INSURANCE
+innout,IN-N-OUT,Food,Dining Out,red,False,False,,,VOO,credit_card,Dining
+netflix,NETFLIX,Subscriptions,Streaming Video,red,True,True,monthly,NFLX,VOO,checking/credit_card,Recurring monthly merchant; group SUB_NETFLIX
+panda,PANDA EXPRESS,Food,Dining Out,red,False,False,,,VOO,credit_card,
+planet,PLANET FITNESS,Health & Fitness,Gym,red,True,True,monthly,,VOO,checking/credit_card,Recurring monthly merchant; group SUB_GYM
+robinhood,ROBINHOOD,Investments,Brokerage,green,False,False,,HOOD,VOO,brokerage,Brokerage buy/transfer
+shell,SHELL,Transportation,Gas,green,False,False,,SHEL,VOO,debit,Fuel
+spectrum,SPECTRUM INTERNET,Utilities,Internet,green,True,True,monthly,CMCSA,VOO,checking/credit_card,Recurring monthly merchant; group BILL_INTERNET
+spotify,SPOTIFY,Subscriptions,Music Streaming,red,True,True,monthly,SPOT,VOO,checking/credit_card,Recurring monthly merchant; group SUB_SPOTIFY
+starbucks,STARBUCKS,Food,Coffee,red,False,False,,SBUX,VOO,credit_card,Coffee
+stater,STATER BROS,Food,Groceries,green,False,False,,,VOO,debit,Groceries
+steam,STEAM,Entertainment,Gaming,red,False,False,,,VOO,credit_card,
+t-mobile,T-MOBILE,Utilities,Phone,green,True,True,monthly,TMUS,VOO,checking/credit_card,Recurring monthly merchant; group BILL_PHONE
+target,TARGET,Shopping,General Merchandise,red,False,False,,TGT,VOO,credit_card,Shopping
+coffee,THE COFFEE BEAN,Food,Coffee,red,False,False,,,VOO,credit_card,
+trader,TRADER JOE'S,Food,Groceries,green,False,False,,,VOO,credit_card,Groceries
+uber,UBER,Transportation,Rideshare,red,False,False,,UBER,VOO,credit_card,Rideshare
+payroll,UCR PAYROLL,Income,Payroll,green,True,False,biweekly,,,checking,Net pay direct deposit
+uniqlo,UNIQLO,Shopping,Clothing,red,False,False,,,VOO,credit_card,Shopping
+venmo,VENMO,Income,Reimbursement,green,False,False,,,,checking,Peer-to-peer reimbursement
+whole,WHOLE FOODS,Food,Groceries,green,False,False,,,VOO,credit_card,Groceries
